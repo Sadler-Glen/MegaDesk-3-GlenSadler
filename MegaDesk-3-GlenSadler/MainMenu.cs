@@ -13,23 +13,23 @@ using System.Windows.Forms;
 
 namespace MegaDesk_3_GlenSadler
 {
-    public partial class Form1 : Form
+    public partial class MainMenu : Form
     {
-        public Form1()
+        public MainMenu()
         {
             InitializeComponent();
         }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void MainMenu_Load(object sender, EventArgs e)
         {
-            // Click on the link below to continue learning how to build a desktop app using WinForms!
-            System.Diagnostics.Process.Start("http://aka.ms/dotnet-get-started-desktop");
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAddQuote_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Thanks!");
+            AddQuote addNewQuoteForm = new AddQuote();
+            addNewQuoteForm.Tag = this;
+            addNewQuoteForm.Show(this);
+            Hide();
         }
     }
 }
