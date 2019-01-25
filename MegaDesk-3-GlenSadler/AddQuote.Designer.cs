@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.customerName = new System.Windows.Forms.Label();
+            this.labelCustomerName = new System.Windows.Forms.Label();
             this.groupBoxSurfaceArea = new System.Windows.Forms.GroupBox();
+            this.labelSurfaceAreaCalc = new System.Windows.Forms.Label();
+            this.labelSurfaceArea = new System.Windows.Forms.Label();
+            this.numericUpDownDepth = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownWidth = new System.Windows.Forms.NumericUpDown();
+            this.labelDepth = new System.Windows.Forms.Label();
+            this.labelWidth = new System.Windows.Forms.Label();
             this.groupBoxShipping = new System.Windows.Forms.GroupBox();
-            this.radioBtnShippingStandard = new System.Windows.Forms.RadioButton();
-            this.radioBtnShipping7days = new System.Windows.Forms.RadioButton();
-            this.radioBtnShipping5days = new System.Windows.Forms.RadioButton();
             this.radioBtnShipping3days = new System.Windows.Forms.RadioButton();
+            this.radioBtnShipping5days = new System.Windows.Forms.RadioButton();
+            this.radioBtnShipping7days = new System.Windows.Forms.RadioButton();
+            this.radioBtnShippingStandard = new System.Windows.Forms.RadioButton();
             this.groupSurfaceMaterial = new System.Windows.Forms.GroupBox();
+            this.radioBtnMaterialVeneer = new System.Windows.Forms.RadioButton();
             this.radioBtnMaterialRosewood = new System.Windows.Forms.RadioButton();
             this.radioBtnMaterialPine = new System.Windows.Forms.RadioButton();
             this.radioBtnMaterialLaminate = new System.Windows.Forms.RadioButton();
             this.radioBtnMaterialOak = new System.Windows.Forms.RadioButton();
-            this.radioBtnMaterialVeneer = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.labelWidth = new System.Windows.Forms.Label();
-            this.labelDepth = new System.Windows.Forms.Label();
-            this.numericUpDownWidth = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownDepth = new System.Windows.Forms.NumericUpDown();
-            this.labelSurfaceArea = new System.Windows.Forms.Label();
-            this.labelSurfaceAreaCalc = new System.Windows.Forms.Label();
+            this.customerName = new System.Windows.Forms.TextBox();
             this.groupBoxDrawer = new System.Windows.Forms.GroupBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
@@ -64,23 +64,23 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.groupBoxSurfaceArea.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDepth)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWidth)).BeginInit();
             this.groupBoxShipping.SuspendLayout();
             this.groupSurfaceMaterial.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWidth)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDepth)).BeginInit();
             this.groupBoxDrawer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
-            // customerName
+            // labelCustomerName
             // 
-            this.customerName.AutoSize = true;
-            this.customerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerName.Location = new System.Drawing.Point(28, 23);
-            this.customerName.Name = "customerName";
-            this.customerName.Size = new System.Drawing.Size(51, 20);
-            this.customerName.TabIndex = 0;
-            this.customerName.Text = "Name";
+            this.labelCustomerName.AutoSize = true;
+            this.labelCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCustomerName.Location = new System.Drawing.Point(28, 23);
+            this.labelCustomerName.Name = "labelCustomerName";
+            this.labelCustomerName.Size = new System.Drawing.Size(51, 20);
+            this.labelCustomerName.TabIndex = 0;
+            this.labelCustomerName.Text = "Name";
             // 
             // groupBoxSurfaceArea
             // 
@@ -98,6 +98,56 @@
             this.groupBoxSurfaceArea.TabStop = false;
             this.groupBoxSurfaceArea.Text = "Surface Area";
             // 
+            // labelSurfaceAreaCalc
+            // 
+            this.labelSurfaceAreaCalc.AutoSize = true;
+            this.labelSurfaceAreaCalc.Location = new System.Drawing.Point(134, 107);
+            this.labelSurfaceAreaCalc.Name = "labelSurfaceAreaCalc";
+            this.labelSurfaceAreaCalc.Size = new System.Drawing.Size(49, 20);
+            this.labelSurfaceAreaCalc.TabIndex = 5;
+            this.labelSurfaceAreaCalc.Text = "? sq \"";
+            // 
+            // labelSurfaceArea
+            // 
+            this.labelSurfaceArea.AutoSize = true;
+            this.labelSurfaceArea.Location = new System.Drawing.Point(7, 103);
+            this.labelSurfaceArea.Name = "labelSurfaceArea";
+            this.labelSurfaceArea.Size = new System.Drawing.Size(103, 20);
+            this.labelSurfaceArea.TabIndex = 4;
+            this.labelSurfaceArea.Text = "Surface Area";
+            // 
+            // numericUpDownDepth
+            // 
+            this.numericUpDownDepth.Location = new System.Drawing.Point(130, 63);
+            this.numericUpDownDepth.Name = "numericUpDownDepth";
+            this.numericUpDownDepth.Size = new System.Drawing.Size(120, 26);
+            this.numericUpDownDepth.TabIndex = 3;
+            // 
+            // numericUpDownWidth
+            // 
+            this.numericUpDownWidth.Location = new System.Drawing.Point(130, 27);
+            this.numericUpDownWidth.Name = "numericUpDownWidth";
+            this.numericUpDownWidth.Size = new System.Drawing.Size(120, 26);
+            this.numericUpDownWidth.TabIndex = 2;
+            // 
+            // labelDepth
+            // 
+            this.labelDepth.AutoSize = true;
+            this.labelDepth.Location = new System.Drawing.Point(7, 65);
+            this.labelDepth.Name = "labelDepth";
+            this.labelDepth.Size = new System.Drawing.Size(113, 20);
+            this.labelDepth.TabIndex = 1;
+            this.labelDepth.Text = "Depth (inches)";
+            // 
+            // labelWidth
+            // 
+            this.labelWidth.AutoSize = true;
+            this.labelWidth.Location = new System.Drawing.Point(7, 29);
+            this.labelWidth.Name = "labelWidth";
+            this.labelWidth.Size = new System.Drawing.Size(110, 20);
+            this.labelWidth.TabIndex = 0;
+            this.labelWidth.Text = "Width (inches)";
+            // 
             // groupBoxShipping
             // 
             this.groupBoxShipping.Controls.Add(this.radioBtnShipping3days);
@@ -112,27 +162,16 @@
             this.groupBoxShipping.TabStop = false;
             this.groupBoxShipping.Text = "Shipping";
             // 
-            // radioBtnShippingStandard
+            // radioBtnShipping3days
             // 
-            this.radioBtnShippingStandard.AutoSize = true;
-            this.radioBtnShippingStandard.Location = new System.Drawing.Point(11, 25);
-            this.radioBtnShippingStandard.Name = "radioBtnShippingStandard";
-            this.radioBtnShippingStandard.Size = new System.Drawing.Size(165, 24);
-            this.radioBtnShippingStandard.TabIndex = 3;
-            this.radioBtnShippingStandard.TabStop = true;
-            this.radioBtnShippingStandard.Text = "Standard (14 Days)";
-            this.radioBtnShippingStandard.UseVisualStyleBackColor = true;
-            // 
-            // radioBtnShipping7days
-            // 
-            this.radioBtnShipping7days.AutoSize = true;
-            this.radioBtnShipping7days.Location = new System.Drawing.Point(11, 55);
-            this.radioBtnShipping7days.Name = "radioBtnShipping7days";
-            this.radioBtnShipping7days.Size = new System.Drawing.Size(77, 24);
-            this.radioBtnShipping7days.TabIndex = 3;
-            this.radioBtnShipping7days.TabStop = true;
-            this.radioBtnShipping7days.Text = "7-Days";
-            this.radioBtnShipping7days.UseVisualStyleBackColor = true;
+            this.radioBtnShipping3days.AutoSize = true;
+            this.radioBtnShipping3days.Location = new System.Drawing.Point(11, 115);
+            this.radioBtnShipping3days.Name = "radioBtnShipping3days";
+            this.radioBtnShipping3days.Size = new System.Drawing.Size(77, 24);
+            this.radioBtnShipping3days.TabIndex = 5;
+            this.radioBtnShipping3days.TabStop = true;
+            this.radioBtnShipping3days.Text = "3-Days";
+            this.radioBtnShipping3days.UseVisualStyleBackColor = true;
             // 
             // radioBtnShipping5days
             // 
@@ -145,16 +184,27 @@
             this.radioBtnShipping5days.Text = "5-Days";
             this.radioBtnShipping5days.UseVisualStyleBackColor = true;
             // 
-            // radioBtnShipping3days
+            // radioBtnShipping7days
             // 
-            this.radioBtnShipping3days.AutoSize = true;
-            this.radioBtnShipping3days.Location = new System.Drawing.Point(11, 115);
-            this.radioBtnShipping3days.Name = "radioBtnShipping3days";
-            this.radioBtnShipping3days.Size = new System.Drawing.Size(77, 24);
-            this.radioBtnShipping3days.TabIndex = 5;
-            this.radioBtnShipping3days.TabStop = true;
-            this.radioBtnShipping3days.Text = "3-Days";
-            this.radioBtnShipping3days.UseVisualStyleBackColor = true;
+            this.radioBtnShipping7days.AutoSize = true;
+            this.radioBtnShipping7days.Location = new System.Drawing.Point(11, 55);
+            this.radioBtnShipping7days.Name = "radioBtnShipping7days";
+            this.radioBtnShipping7days.Size = new System.Drawing.Size(77, 24);
+            this.radioBtnShipping7days.TabIndex = 3;
+            this.radioBtnShipping7days.TabStop = true;
+            this.radioBtnShipping7days.Text = "7-Days";
+            this.radioBtnShipping7days.UseVisualStyleBackColor = true;
+            // 
+            // radioBtnShippingStandard
+            // 
+            this.radioBtnShippingStandard.AutoSize = true;
+            this.radioBtnShippingStandard.Location = new System.Drawing.Point(11, 25);
+            this.radioBtnShippingStandard.Name = "radioBtnShippingStandard";
+            this.radioBtnShippingStandard.Size = new System.Drawing.Size(165, 24);
+            this.radioBtnShippingStandard.TabIndex = 3;
+            this.radioBtnShippingStandard.TabStop = true;
+            this.radioBtnShippingStandard.Text = "Standard (14 Days)";
+            this.radioBtnShippingStandard.UseVisualStyleBackColor = true;
             // 
             // groupSurfaceMaterial
             // 
@@ -170,6 +220,17 @@
             this.groupSurfaceMaterial.TabIndex = 6;
             this.groupSurfaceMaterial.TabStop = false;
             this.groupSurfaceMaterial.Text = "Surface Material";
+            // 
+            // radioBtnMaterialVeneer
+            // 
+            this.radioBtnMaterialVeneer.AutoSize = true;
+            this.radioBtnMaterialVeneer.Location = new System.Drawing.Point(8, 145);
+            this.radioBtnMaterialVeneer.Name = "radioBtnMaterialVeneer";
+            this.radioBtnMaterialVeneer.Size = new System.Drawing.Size(79, 24);
+            this.radioBtnMaterialVeneer.TabIndex = 6;
+            this.radioBtnMaterialVeneer.TabStop = true;
+            this.radioBtnMaterialVeneer.Text = "Veneer";
+            this.radioBtnMaterialVeneer.UseVisualStyleBackColor = true;
             // 
             // radioBtnMaterialRosewood
             // 
@@ -215,73 +276,13 @@
             this.radioBtnMaterialOak.Text = "Oak";
             this.radioBtnMaterialOak.UseVisualStyleBackColor = true;
             // 
-            // radioBtnMaterialVeneer
+            // customerName
             // 
-            this.radioBtnMaterialVeneer.AutoSize = true;
-            this.radioBtnMaterialVeneer.Location = new System.Drawing.Point(8, 145);
-            this.radioBtnMaterialVeneer.Name = "radioBtnMaterialVeneer";
-            this.radioBtnMaterialVeneer.Size = new System.Drawing.Size(79, 24);
-            this.radioBtnMaterialVeneer.TabIndex = 6;
-            this.radioBtnMaterialVeneer.TabStop = true;
-            this.radioBtnMaterialVeneer.Text = "Veneer";
-            this.radioBtnMaterialVeneer.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(85, 23);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(214, 20);
-            this.textBox1.TabIndex = 7;
-            // 
-            // labelWidth
-            // 
-            this.labelWidth.AutoSize = true;
-            this.labelWidth.Location = new System.Drawing.Point(7, 29);
-            this.labelWidth.Name = "labelWidth";
-            this.labelWidth.Size = new System.Drawing.Size(110, 20);
-            this.labelWidth.TabIndex = 0;
-            this.labelWidth.Text = "Width (inches)";
-            // 
-            // labelDepth
-            // 
-            this.labelDepth.AutoSize = true;
-            this.labelDepth.Location = new System.Drawing.Point(7, 65);
-            this.labelDepth.Name = "labelDepth";
-            this.labelDepth.Size = new System.Drawing.Size(113, 20);
-            this.labelDepth.TabIndex = 1;
-            this.labelDepth.Text = "Depth (inches)";
-            // 
-            // numericUpDownWidth
-            // 
-            this.numericUpDownWidth.Location = new System.Drawing.Point(130, 27);
-            this.numericUpDownWidth.Name = "numericUpDownWidth";
-            this.numericUpDownWidth.Size = new System.Drawing.Size(120, 26);
-            this.numericUpDownWidth.TabIndex = 2;
-            // 
-            // numericUpDownDepth
-            // 
-            this.numericUpDownDepth.Location = new System.Drawing.Point(130, 63);
-            this.numericUpDownDepth.Name = "numericUpDownDepth";
-            this.numericUpDownDepth.Size = new System.Drawing.Size(120, 26);
-            this.numericUpDownDepth.TabIndex = 3;
-            // 
-            // labelSurfaceArea
-            // 
-            this.labelSurfaceArea.AutoSize = true;
-            this.labelSurfaceArea.Location = new System.Drawing.Point(7, 103);
-            this.labelSurfaceArea.Name = "labelSurfaceArea";
-            this.labelSurfaceArea.Size = new System.Drawing.Size(103, 20);
-            this.labelSurfaceArea.TabIndex = 4;
-            this.labelSurfaceArea.Text = "Surface Area";
-            // 
-            // labelSurfaceAreaCalc
-            // 
-            this.labelSurfaceAreaCalc.AutoSize = true;
-            this.labelSurfaceAreaCalc.Location = new System.Drawing.Point(134, 107);
-            this.labelSurfaceAreaCalc.Name = "labelSurfaceAreaCalc";
-            this.labelSurfaceAreaCalc.Size = new System.Drawing.Size(49, 20);
-            this.labelSurfaceAreaCalc.TabIndex = 5;
-            this.labelSurfaceAreaCalc.Text = "? sq \"";
+            this.customerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customerName.Location = new System.Drawing.Point(85, 23);
+            this.customerName.Name = "customerName";
+            this.customerName.Size = new System.Drawing.Size(214, 26);
+            this.customerName.TabIndex = 7;
             // 
             // groupBoxDrawer
             // 
@@ -449,22 +450,23 @@
             this.Controls.Add(this.labelSuraceAreaCalcNumber);
             this.Controls.Add(this.labelSurfaceAreaTotal);
             this.Controls.Add(this.groupBoxDrawer);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.customerName);
             this.Controls.Add(this.groupSurfaceMaterial);
             this.Controls.Add(this.groupBoxShipping);
             this.Controls.Add(this.groupBoxSurfaceArea);
-            this.Controls.Add(this.customerName);
+            this.Controls.Add(this.labelCustomerName);
             this.Name = "AddQuote";
             this.Text = "Add Quote";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AddQuote_FormClosing);
             this.Load += new System.EventHandler(this.AddQuote_Load);
             this.groupBoxSurfaceArea.ResumeLayout(false);
             this.groupBoxSurfaceArea.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDepth)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWidth)).EndInit();
             this.groupBoxShipping.ResumeLayout(false);
             this.groupBoxShipping.PerformLayout();
             this.groupSurfaceMaterial.ResumeLayout(false);
             this.groupSurfaceMaterial.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWidth)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDepth)).EndInit();
             this.groupBoxDrawer.ResumeLayout(false);
             this.groupBoxDrawer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
@@ -475,7 +477,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label customerName;
+        private System.Windows.Forms.Label labelCustomerName;
         private System.Windows.Forms.GroupBox groupBoxSurfaceArea;
         private System.Windows.Forms.Label labelSurfaceAreaCalc;
         private System.Windows.Forms.Label labelSurfaceArea;
@@ -494,7 +496,7 @@
         private System.Windows.Forms.RadioButton radioBtnMaterialPine;
         private System.Windows.Forms.RadioButton radioBtnMaterialLaminate;
         private System.Windows.Forms.RadioButton radioBtnMaterialOak;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox customerName;
         protected System.Windows.Forms.GroupBox groupBoxDrawer;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label1;

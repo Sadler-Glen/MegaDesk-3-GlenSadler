@@ -37,9 +37,10 @@ namespace MegaDesk_3_GlenSadler
             // 
             // btnAddQuote
             // 
-            this.btnAddQuote.Location = new System.Drawing.Point(68, 64);
+            this.btnAddQuote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddQuote.Location = new System.Drawing.Point(46, 56);
             this.btnAddQuote.Name = "btnAddQuote";
-            this.btnAddQuote.Size = new System.Drawing.Size(110, 38);
+            this.btnAddQuote.Size = new System.Drawing.Size(150, 40);
             this.btnAddQuote.TabIndex = 0;
             this.btnAddQuote.Text = "Add New Quote";
             this.btnAddQuote.UseVisualStyleBackColor = true;
@@ -47,27 +48,31 @@ namespace MegaDesk_3_GlenSadler
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(68, 199);
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Location = new System.Drawing.Point(46, 240);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(110, 38);
+            this.btnExit.Size = new System.Drawing.Size(150, 40);
             this.btnExit.TabIndex = 1;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnSearchQuotes
             // 
-            this.btnSearchQuotes.Location = new System.Drawing.Point(68, 154);
+            this.btnSearchQuotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchQuotes.Location = new System.Drawing.Point(46, 179);
             this.btnSearchQuotes.Name = "btnSearchQuotes";
-            this.btnSearchQuotes.Size = new System.Drawing.Size(110, 38);
+            this.btnSearchQuotes.Size = new System.Drawing.Size(150, 40);
             this.btnSearchQuotes.TabIndex = 2;
             this.btnSearchQuotes.Text = "Search Quotes";
             this.btnSearchQuotes.UseVisualStyleBackColor = true;
             // 
             // btnViewAllQuotes
             // 
-            this.btnViewAllQuotes.Location = new System.Drawing.Point(68, 109);
+            this.btnViewAllQuotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewAllQuotes.Location = new System.Drawing.Point(46, 117);
             this.btnViewAllQuotes.Name = "btnViewAllQuotes";
-            this.btnViewAllQuotes.Size = new System.Drawing.Size(110, 38);
+            this.btnViewAllQuotes.Size = new System.Drawing.Size(150, 40);
             this.btnViewAllQuotes.TabIndex = 3;
             this.btnViewAllQuotes.Text = "View All Quotes";
             this.btnViewAllQuotes.UseVisualStyleBackColor = true;
@@ -76,7 +81,7 @@ namespace MegaDesk_3_GlenSadler
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(68, 19);
+            this.label1.Location = new System.Drawing.Point(66, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 25);
             this.label1.TabIndex = 4;
@@ -86,7 +91,7 @@ namespace MegaDesk_3_GlenSadler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(533, 292);
+            this.ClientSize = new System.Drawing.Size(534, 321);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnViewAllQuotes);
             this.Controls.Add(this.btnSearchQuotes);
@@ -94,7 +99,9 @@ namespace MegaDesk_3_GlenSadler
             this.Controls.Add(this.btnAddQuote);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MegaDesk -3-Glen Sadler";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainMenu_FormClosing);
             this.Load += new System.EventHandler(this.MainMenu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

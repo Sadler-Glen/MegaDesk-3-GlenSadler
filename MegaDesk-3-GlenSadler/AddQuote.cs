@@ -21,5 +21,10 @@ namespace MegaDesk_3_GlenSadler
         {
 
         }
+
+        private void AddQuote_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
