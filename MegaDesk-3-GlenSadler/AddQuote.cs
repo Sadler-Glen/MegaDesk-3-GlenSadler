@@ -16,5 +16,10 @@ namespace MegaDesk_3_GlenSadler
         {
             InitializeComponent();
         }
+
+        private void AddQuote_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
