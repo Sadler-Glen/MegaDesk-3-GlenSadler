@@ -81,7 +81,7 @@ namespace MegaDesk_3_GlenSadler
             {
                 MessageBox.Show("Please enter a number");
                 e.Handled = true;
-                numericDepth.BackColor = Color.DarkOrange;
+                numericDepth.BackColor = Color.Red;
                 numericDepth.Focus();
             }
             else
