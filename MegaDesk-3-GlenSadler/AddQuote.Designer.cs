@@ -30,6 +30,7 @@
         {
             this.labelCustomerName = new System.Windows.Forms.Label();
             this.groupBoxSurfaceArea = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.labelSurfaceAreaCalc = new System.Windows.Forms.Label();
             this.labelSurfaceArea = new System.Windows.Forms.Label();
             this.numericUpDownDepth = new System.Windows.Forms.NumericUpDown();
@@ -63,6 +64,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSubmit = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBoxSurfaceArea.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDepth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWidth)).BeginInit();
@@ -70,6 +72,7 @@
             this.groupSurfaceMaterial.SuspendLayout();
             this.groupBoxDrawer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelCustomerName
@@ -84,6 +87,7 @@
             // 
             // groupBoxSurfaceArea
             // 
+            this.groupBoxSurfaceArea.Controls.Add(this.label2);
             this.groupBoxSurfaceArea.Controls.Add(this.labelSurfaceAreaCalc);
             this.groupBoxSurfaceArea.Controls.Add(this.labelSurfaceArea);
             this.groupBoxSurfaceArea.Controls.Add(this.numericUpDownDepth);
@@ -98,14 +102,23 @@
             this.groupBoxSurfaceArea.TabStop = false;
             this.groupBoxSurfaceArea.Text = "Surface Area";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(168, 103);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(32, 20);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "sq\"";
+            // 
             // labelSurfaceAreaCalc
             // 
             this.labelSurfaceAreaCalc.AutoSize = true;
-            this.labelSurfaceAreaCalc.Location = new System.Drawing.Point(134, 107);
+            this.labelSurfaceAreaCalc.Location = new System.Drawing.Point(140, 103);
             this.labelSurfaceAreaCalc.Name = "labelSurfaceAreaCalc";
-            this.labelSurfaceAreaCalc.Size = new System.Drawing.Size(49, 20);
+            this.labelSurfaceAreaCalc.Size = new System.Drawing.Size(22, 20);
             this.labelSurfaceAreaCalc.TabIndex = 5;
-            this.labelSurfaceAreaCalc.Text = "? sq \"";
+            this.labelSurfaceAreaCalc.Text = "? ";
             // 
             // labelSurfaceArea
             // 
@@ -119,16 +132,46 @@
             // numericUpDownDepth
             // 
             this.numericUpDownDepth.Location = new System.Drawing.Point(130, 63);
+            this.numericUpDownDepth.Maximum = new decimal(new int[] {
+            48,
+            0,
+            0,
+            0});
+            this.numericUpDownDepth.Minimum = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
             this.numericUpDownDepth.Name = "numericUpDownDepth";
             this.numericUpDownDepth.Size = new System.Drawing.Size(120, 26);
-            this.numericUpDownDepth.TabIndex = 3;
+            this.numericUpDownDepth.TabIndex = 1;
+            this.numericUpDownDepth.Value = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
             // 
             // numericUpDownWidth
             // 
             this.numericUpDownWidth.Location = new System.Drawing.Point(130, 27);
+            this.numericUpDownWidth.Maximum = new decimal(new int[] {
+            96,
+            0,
+            0,
+            0});
+            this.numericUpDownWidth.Minimum = new decimal(new int[] {
+            24,
+            0,
+            0,
+            0});
             this.numericUpDownWidth.Name = "numericUpDownWidth";
             this.numericUpDownWidth.Size = new System.Drawing.Size(120, 26);
-            this.numericUpDownWidth.TabIndex = 2;
+            this.numericUpDownWidth.TabIndex = 0;
+            this.numericUpDownWidth.Value = new decimal(new int[] {
+            24,
+            0,
+            0,
+            0});
             // 
             // labelDepth
             // 
@@ -155,10 +198,10 @@
             this.groupBoxShipping.Controls.Add(this.radioBtnShipping7days);
             this.groupBoxShipping.Controls.Add(this.radioBtnShippingStandard);
             this.groupBoxShipping.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxShipping.Location = new System.Drawing.Point(32, 290);
+            this.groupBoxShipping.Location = new System.Drawing.Point(32, 327);
             this.groupBoxShipping.Name = "groupBoxShipping";
             this.groupBoxShipping.Size = new System.Drawing.Size(268, 148);
-            this.groupBoxShipping.TabIndex = 2;
+            this.groupBoxShipping.TabIndex = 4;
             this.groupBoxShipping.TabStop = false;
             this.groupBoxShipping.Text = "Shipping";
             // 
@@ -168,7 +211,7 @@
             this.radioBtnShipping3days.Location = new System.Drawing.Point(11, 115);
             this.radioBtnShipping3days.Name = "radioBtnShipping3days";
             this.radioBtnShipping3days.Size = new System.Drawing.Size(77, 24);
-            this.radioBtnShipping3days.TabIndex = 5;
+            this.radioBtnShipping3days.TabIndex = 3;
             this.radioBtnShipping3days.TabStop = true;
             this.radioBtnShipping3days.Text = "3-Days";
             this.radioBtnShipping3days.UseVisualStyleBackColor = true;
@@ -179,7 +222,7 @@
             this.radioBtnShipping5days.Location = new System.Drawing.Point(11, 85);
             this.radioBtnShipping5days.Name = "radioBtnShipping5days";
             this.radioBtnShipping5days.Size = new System.Drawing.Size(77, 24);
-            this.radioBtnShipping5days.TabIndex = 4;
+            this.radioBtnShipping5days.TabIndex = 2;
             this.radioBtnShipping5days.TabStop = true;
             this.radioBtnShipping5days.Text = "5-Days";
             this.radioBtnShipping5days.UseVisualStyleBackColor = true;
@@ -190,7 +233,7 @@
             this.radioBtnShipping7days.Location = new System.Drawing.Point(11, 55);
             this.radioBtnShipping7days.Name = "radioBtnShipping7days";
             this.radioBtnShipping7days.Size = new System.Drawing.Size(77, 24);
-            this.radioBtnShipping7days.TabIndex = 3;
+            this.radioBtnShipping7days.TabIndex = 1;
             this.radioBtnShipping7days.TabStop = true;
             this.radioBtnShipping7days.Text = "7-Days";
             this.radioBtnShipping7days.UseVisualStyleBackColor = true;
@@ -201,7 +244,7 @@
             this.radioBtnShippingStandard.Location = new System.Drawing.Point(11, 25);
             this.radioBtnShippingStandard.Name = "radioBtnShippingStandard";
             this.radioBtnShippingStandard.Size = new System.Drawing.Size(165, 24);
-            this.radioBtnShippingStandard.TabIndex = 3;
+            this.radioBtnShippingStandard.TabIndex = 0;
             this.radioBtnShippingStandard.TabStop = true;
             this.radioBtnShippingStandard.Text = "Standard (14 Days)";
             this.radioBtnShippingStandard.UseVisualStyleBackColor = true;
@@ -216,8 +259,8 @@
             this.groupSurfaceMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupSurfaceMaterial.Location = new System.Drawing.Point(355, 56);
             this.groupSurfaceMaterial.Name = "groupSurfaceMaterial";
-            this.groupSurfaceMaterial.Size = new System.Drawing.Size(200, 193);
-            this.groupSurfaceMaterial.TabIndex = 6;
+            this.groupSurfaceMaterial.Size = new System.Drawing.Size(232, 193);
+            this.groupSurfaceMaterial.TabIndex = 2;
             this.groupSurfaceMaterial.TabStop = false;
             this.groupSurfaceMaterial.Text = "Surface Material";
             // 
@@ -227,7 +270,7 @@
             this.radioBtnMaterialVeneer.Location = new System.Drawing.Point(8, 145);
             this.radioBtnMaterialVeneer.Name = "radioBtnMaterialVeneer";
             this.radioBtnMaterialVeneer.Size = new System.Drawing.Size(79, 24);
-            this.radioBtnMaterialVeneer.TabIndex = 6;
+            this.radioBtnMaterialVeneer.TabIndex = 4;
             this.radioBtnMaterialVeneer.TabStop = true;
             this.radioBtnMaterialVeneer.Text = "Veneer";
             this.radioBtnMaterialVeneer.UseVisualStyleBackColor = true;
@@ -238,7 +281,7 @@
             this.radioBtnMaterialRosewood.Location = new System.Drawing.Point(8, 115);
             this.radioBtnMaterialRosewood.Name = "radioBtnMaterialRosewood";
             this.radioBtnMaterialRosewood.Size = new System.Drawing.Size(103, 24);
-            this.radioBtnMaterialRosewood.TabIndex = 5;
+            this.radioBtnMaterialRosewood.TabIndex = 3;
             this.radioBtnMaterialRosewood.TabStop = true;
             this.radioBtnMaterialRosewood.Text = "Rosewood";
             this.radioBtnMaterialRosewood.UseVisualStyleBackColor = true;
@@ -249,7 +292,7 @@
             this.radioBtnMaterialPine.Location = new System.Drawing.Point(8, 85);
             this.radioBtnMaterialPine.Name = "radioBtnMaterialPine";
             this.radioBtnMaterialPine.Size = new System.Drawing.Size(58, 24);
-            this.radioBtnMaterialPine.TabIndex = 4;
+            this.radioBtnMaterialPine.TabIndex = 2;
             this.radioBtnMaterialPine.TabStop = true;
             this.radioBtnMaterialPine.Text = "Pine";
             this.radioBtnMaterialPine.UseVisualStyleBackColor = true;
@@ -260,7 +303,7 @@
             this.radioBtnMaterialLaminate.Location = new System.Drawing.Point(8, 55);
             this.radioBtnMaterialLaminate.Name = "radioBtnMaterialLaminate";
             this.radioBtnMaterialLaminate.Size = new System.Drawing.Size(93, 24);
-            this.radioBtnMaterialLaminate.TabIndex = 3;
+            this.radioBtnMaterialLaminate.TabIndex = 1;
             this.radioBtnMaterialLaminate.TabStop = true;
             this.radioBtnMaterialLaminate.Text = "Laminate";
             this.radioBtnMaterialLaminate.UseVisualStyleBackColor = true;
@@ -271,7 +314,7 @@
             this.radioBtnMaterialOak.Location = new System.Drawing.Point(8, 25);
             this.radioBtnMaterialOak.Name = "radioBtnMaterialOak";
             this.radioBtnMaterialOak.Size = new System.Drawing.Size(56, 24);
-            this.radioBtnMaterialOak.TabIndex = 3;
+            this.radioBtnMaterialOak.TabIndex = 0;
             this.radioBtnMaterialOak.TabStop = true;
             this.radioBtnMaterialOak.Text = "Oak";
             this.radioBtnMaterialOak.UseVisualStyleBackColor = true;
@@ -282,41 +325,46 @@
             this.customerName.Location = new System.Drawing.Point(85, 23);
             this.customerName.Name = "customerName";
             this.customerName.Size = new System.Drawing.Size(214, 26);
-            this.customerName.TabIndex = 7;
+            this.customerName.TabIndex = 0;
             // 
             // groupBoxDrawer
             // 
             this.groupBoxDrawer.Controls.Add(this.numericUpDown1);
             this.groupBoxDrawer.Controls.Add(this.label1);
             this.groupBoxDrawer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxDrawer.Location = new System.Drawing.Point(32, 209);
+            this.groupBoxDrawer.Location = new System.Drawing.Point(33, 227);
             this.groupBoxDrawer.Name = "groupBoxDrawer";
             this.groupBoxDrawer.Size = new System.Drawing.Size(267, 64);
-            this.groupBoxDrawer.TabIndex = 8;
+            this.groupBoxDrawer.TabIndex = 3;
             this.groupBoxDrawer.TabStop = false;
             this.groupBoxDrawer.Text = "Number of Drawers";
             // 
             // numericUpDown1
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(129, 29);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            7,
+            0,
+            0,
+            0});
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(120, 26);
-            this.numericUpDown1.TabIndex = 7;
+            this.numericUpDown1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(6, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 20);
+            this.label1.Size = new System.Drawing.Size(68, 20);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Width (in)";
+            this.label1.Text = "Drawers";
             // 
             // labelSuraceAreaCalcNumber
             // 
             this.labelSuraceAreaCalcNumber.AutoSize = true;
             this.labelSuraceAreaCalcNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSuraceAreaCalcNumber.Location = new System.Drawing.Point(479, 269);
+            this.labelSuraceAreaCalcNumber.Location = new System.Drawing.Point(130, 25);
             this.labelSuraceAreaCalcNumber.Name = "labelSuraceAreaCalcNumber";
             this.labelSuraceAreaCalcNumber.Size = new System.Drawing.Size(18, 20);
             this.labelSuraceAreaCalcNumber.TabIndex = 10;
@@ -326,7 +374,7 @@
             // 
             this.labelSurfaceAreaTotal.AutoSize = true;
             this.labelSurfaceAreaTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSurfaceAreaTotal.Location = new System.Drawing.Point(359, 269);
+            this.labelSurfaceAreaTotal.Location = new System.Drawing.Point(10, 25);
             this.labelSurfaceAreaTotal.Name = "labelSurfaceAreaTotal";
             this.labelSurfaceAreaTotal.Size = new System.Drawing.Size(111, 20);
             this.labelSurfaceAreaTotal.TabIndex = 9;
@@ -336,7 +384,7 @@
             // 
             this.labelMaterialCalcNumber.AutoSize = true;
             this.labelMaterialCalcNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMaterialCalcNumber.Location = new System.Drawing.Point(479, 306);
+            this.labelMaterialCalcNumber.Location = new System.Drawing.Point(130, 62);
             this.labelMaterialCalcNumber.Name = "labelMaterialCalcNumber";
             this.labelMaterialCalcNumber.Size = new System.Drawing.Size(18, 20);
             this.labelMaterialCalcNumber.TabIndex = 12;
@@ -346,7 +394,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(394, 333);
+            this.label3.Location = new System.Drawing.Point(45, 89);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 20);
             this.label3.TabIndex = 11;
@@ -356,7 +404,7 @@
             // 
             this.labelDrawersCalcNumber.AutoSize = true;
             this.labelDrawersCalcNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDrawersCalcNumber.Location = new System.Drawing.Point(479, 336);
+            this.labelDrawersCalcNumber.Location = new System.Drawing.Point(130, 92);
             this.labelDrawersCalcNumber.Name = "labelDrawersCalcNumber";
             this.labelDrawersCalcNumber.Size = new System.Drawing.Size(18, 20);
             this.labelDrawersCalcNumber.TabIndex = 14;
@@ -366,7 +414,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(389, 301);
+            this.label5.Location = new System.Drawing.Point(40, 57);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(81, 20);
             this.label5.TabIndex = 13;
@@ -376,7 +424,7 @@
             // 
             this.labelTotalCostNumber.AutoSize = true;
             this.labelTotalCostNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotalCostNumber.Location = new System.Drawing.Point(479, 400);
+            this.labelTotalCostNumber.Location = new System.Drawing.Point(130, 174);
             this.labelTotalCostNumber.Name = "labelTotalCostNumber";
             this.labelTotalCostNumber.Size = new System.Drawing.Size(18, 20);
             this.labelTotalCostNumber.TabIndex = 16;
@@ -386,7 +434,7 @@
             // 
             this.labelTotalCost.AutoSize = true;
             this.labelTotalCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotalCost.Location = new System.Drawing.Point(381, 397);
+            this.labelTotalCost.Location = new System.Drawing.Point(32, 171);
             this.labelTotalCost.Name = "labelTotalCost";
             this.labelTotalCost.Size = new System.Drawing.Size(89, 20);
             this.labelTotalCost.TabIndex = 15;
@@ -396,7 +444,7 @@
             // 
             this.labelShippingCalcNumber.AutoSize = true;
             this.labelShippingCalcNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelShippingCalcNumber.Location = new System.Drawing.Point(479, 364);
+            this.labelShippingCalcNumber.Location = new System.Drawing.Point(130, 120);
             this.labelShippingCalcNumber.Name = "labelShippingCalcNumber";
             this.labelShippingCalcNumber.Size = new System.Drawing.Size(18, 20);
             this.labelShippingCalcNumber.TabIndex = 18;
@@ -406,7 +454,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(391, 365);
+            this.label9.Location = new System.Drawing.Point(42, 121);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(79, 20);
             this.label9.TabIndex = 17;
@@ -415,49 +463,63 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(199, 474);
+            this.btnCancel.Location = new System.Drawing.Point(197, 508);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(100, 40);
-            this.btnCancel.TabIndex = 19;
+            this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSubmit
             // 
             this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.Location = new System.Drawing.Point(342, 474);
+            this.btnSubmit.Location = new System.Drawing.Point(319, 508);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(100, 40);
-            this.btnSubmit.TabIndex = 20;
+            this.btnSubmit.TabIndex = 5;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.labelSurfaceAreaTotal);
+            this.groupBox1.Controls.Add(this.labelSuraceAreaCalcNumber);
+            this.groupBox1.Controls.Add(this.labelShippingCalcNumber);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.labelMaterialCalcNumber);
+            this.groupBox1.Controls.Add(this.labelTotalCostNumber);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.labelTotalCost);
+            this.groupBox1.Controls.Add(this.labelDrawersCalcNumber);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(355, 271);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(232, 204);
+            this.groupBox1.TabIndex = 19;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Quote Summary";
             // 
             // AddQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(587, 539);
+            this.ClientSize = new System.Drawing.Size(619, 566);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.labelShippingCalcNumber);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.labelTotalCostNumber);
-            this.Controls.Add(this.labelTotalCost);
-            this.Controls.Add(this.labelDrawersCalcNumber);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.labelMaterialCalcNumber);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.labelSuraceAreaCalcNumber);
-            this.Controls.Add(this.labelSurfaceAreaTotal);
             this.Controls.Add(this.groupBoxDrawer);
             this.Controls.Add(this.customerName);
             this.Controls.Add(this.groupSurfaceMaterial);
             this.Controls.Add(this.groupBoxShipping);
             this.Controls.Add(this.groupBoxSurfaceArea);
             this.Controls.Add(this.labelCustomerName);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AddQuote";
             this.Text = "Add Quote";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AddQuote_FormClosing);
             this.Load += new System.EventHandler(this.AddQuote_Load);
             this.groupBoxSurfaceArea.ResumeLayout(false);
             this.groupBoxSurfaceArea.PerformLayout();
@@ -470,6 +532,8 @@
             this.groupBoxDrawer.ResumeLayout(false);
             this.groupBoxDrawer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -512,5 +576,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

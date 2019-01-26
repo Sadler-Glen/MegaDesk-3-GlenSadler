@@ -32,12 +32,28 @@ namespace MegaDesk_3_GlenSadler
             Hide();
         }
 
-        private void MainMenu_FormClosing(object sender, FormClosingEventArgs e)
+        private void btnViewAllQuotes_Click(object sender, EventArgs e)
+        {
+            ViewAllQuotes viewQuotes = new ViewAllQuotes();
+            viewQuotes.Tag = this;
+            viewQuotes.Show(this);
+            Hide();
+        }
+
+        private void btnSearchQuotes_Click(object sender, EventArgs e)
+        {
+            SearchQuotes searchQuotes = new SearchQuotes();
+            searchQuotes.Tag = this;
+            searchQuotes.Show(this);
+            Hide();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void MainMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }

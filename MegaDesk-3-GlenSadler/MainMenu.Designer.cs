@@ -28,11 +28,14 @@ namespace MegaDesk_3_GlenSadler
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.btnAddQuote = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnSearchQuotes = new System.Windows.Forms.Button();
             this.btnViewAllQuotes = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBoxMainMenu = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMainMenu)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAddQuote
@@ -66,6 +69,7 @@ namespace MegaDesk_3_GlenSadler
             this.btnSearchQuotes.TabIndex = 2;
             this.btnSearchQuotes.Text = "Search Quotes";
             this.btnSearchQuotes.UseVisualStyleBackColor = true;
+            this.btnSearchQuotes.Click += new System.EventHandler(this.btnSearchQuotes_Click);
             // 
             // btnViewAllQuotes
             // 
@@ -76,6 +80,7 @@ namespace MegaDesk_3_GlenSadler
             this.btnViewAllQuotes.TabIndex = 3;
             this.btnViewAllQuotes.Text = "View All Quotes";
             this.btnViewAllQuotes.UseVisualStyleBackColor = true;
+            this.btnViewAllQuotes.Click += new System.EventHandler(this.btnViewAllQuotes_Click);
             // 
             // label1
             // 
@@ -87,11 +92,21 @@ namespace MegaDesk_3_GlenSadler
             this.label1.TabIndex = 4;
             this.label1.Text = "Main Menu";
             // 
+            // pictureBoxMainMenu
+            // 
+            this.pictureBoxMainMenu.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxMainMenu.Image")));
+            this.pictureBoxMainMenu.Location = new System.Drawing.Point(236, 72);
+            this.pictureBoxMainMenu.Name = "pictureBoxMainMenu";
+            this.pictureBoxMainMenu.Size = new System.Drawing.Size(250, 199);
+            this.pictureBoxMainMenu.TabIndex = 5;
+            this.pictureBoxMainMenu.TabStop = false;
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(534, 321);
+            this.Controls.Add(this.pictureBoxMainMenu);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnViewAllQuotes);
             this.Controls.Add(this.btnSearchQuotes);
@@ -103,6 +118,7 @@ namespace MegaDesk_3_GlenSadler
             this.Text = "MegaDesk -3-Glen Sadler";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainMenu_FormClosing);
             this.Load += new System.EventHandler(this.MainMenu_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMainMenu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -115,6 +131,7 @@ namespace MegaDesk_3_GlenSadler
         private System.Windows.Forms.Button btnSearchQuotes;
         private System.Windows.Forms.Button btnViewAllQuotes;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBoxMainMenu;
     }
 }
 
