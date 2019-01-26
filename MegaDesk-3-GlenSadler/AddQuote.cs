@@ -51,7 +51,7 @@ namespace MegaDesk_3_GlenSadler
             {
                 if (WidthInput < Desk.MINWIDTH || WidthInput > Desk.MAXWIDTH)
                 {
-                    MessageBox.Show("The width must be between " + Desk.MINWIDTH + " to " + Desk.MAXWIDTH + " inches inclusive");
+                    MessageBox.Show($"The width must be between {Desk.MINWIDTH} and {Desk.MAXWIDTH} inches inclusive");
                     numericWidth.Text = String.Empty;
                     numericWidth.BackColor = Color.Red;
                     numericWidth.Focus();
@@ -75,8 +75,57 @@ namespace MegaDesk_3_GlenSadler
 
         }
 
+        private void numericWidth_Keypress(object sender, KeyPressEventArgs e)
+        {
+            //numericWidth.Minimum = 24;
+            //numericWidth.Maximum = 96;
+            if (Char.IsControl(e.KeyChar) == false && Char.IsDigit(e.KeyChar) == false)
+            {
+                MessageBox.Show("Please enter a number");
+                e.Handled = true;
+                numericWidth.BackColor = Color.Red;
+                numericWidth.Focus();
+            }
+            else
+            {
+                numericWidth.BackColor = System.Drawing.SystemColors.Window;
+            }
+        }
+
+        private void numericDepthEvent(object sender, EventArgs e)
+        {
+            //numericWidth.Minimum = 12;
+            //numericWidth.Maximum = 48;
+            if (int.TryParse(numericDepth.Text, out int DepthInput) == true) {
+                if (DepthInput < Desk.MINDEPTH || DepthInput > Desk.MAXDEPTH)
+                {
+                    MessageBox.Show($"The width must be between {Desk.MINDEPTH} and {Desk.MAXDEPTH} inches inclusive");
+                    numericDepth.Text = String.Empty;
+                    numericDepth.BackColor = Color.Red;
+                    numericDepth.Focus();
+                }
+                else
+                {
+                    numericDepth.BackColor = System.Drawing.SystemColors.Window;
+                }
+            }
+            else if (int.TryParse(numericDepth.Text, out DepthInput) == false && numericDepth.Text.Length != 0)
+            {
+                MessageBox.Show("Please enter a number");
+                numericDepth.Text = String.Empty;
+                numericDepth.BackColor = Color.Red;
+                numericDepth.Focus();
+            }
+            else
+            {
+                numericDepth.BackColor = System.Drawing.SystemColors.Window;
+            }
+        }
+
         private void numericDepth_Keypress(object sender, KeyPressEventArgs e)
         {
+            //numericDepth.Minimum = 12;
+            //numericDepth.Maximum = 48;
             if (Char.IsControl(e.KeyChar) == false && Char.IsDigit(e.KeyChar) == false)
             {
                 MessageBox.Show("Please enter a number");

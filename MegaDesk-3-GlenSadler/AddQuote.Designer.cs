@@ -124,6 +124,7 @@
             this.numericDepth.Name = "numericDepth";
             this.numericDepth.Size = new System.Drawing.Size(120, 26);
             this.numericDepth.TabIndex = 1;
+            this.numericDepth.ValueChanged += new System.EventHandler(this.numericDepthEvent);
             this.numericDepth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numericDepth_Keypress);
             // 
             // numericWidth
@@ -133,6 +134,7 @@
             this.numericWidth.Size = new System.Drawing.Size(120, 26);
             this.numericWidth.TabIndex = 0;
             this.numericWidth.ValueChanged += new System.EventHandler(this.numericWidthEvent);
+            this.numericWidth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numericWidth_Keypress);
             // 
             // labelDepth
             // 
