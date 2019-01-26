@@ -23,15 +23,5 @@ namespace MegaDesk_3_GlenSadler
             mainMenu.Show();
             Close();
         }
-
-        private void SearchQuotes_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void SearchQuotes_FormClosing_1(object sender, FormClosingEventArgs e)
-        {
-
-        }
     }
 }
