@@ -51,7 +51,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "DisplayQuote";
-            this.Text = "DisplayQuote";
+            this.Text = "Display Quote";
             this.ResumeLayout(false);
 
         }

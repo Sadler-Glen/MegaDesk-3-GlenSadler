@@ -51,7 +51,7 @@ namespace MegaDesk_3_GlenSadler
             {
                 if (WidthInput < Desk.MINWIDTH || WidthInput > Desk.MAXWIDTH)
                 {
-                    MessageBox.Show($"The width must be between {Desk.MINWIDTH} and {Desk.MAXWIDTH} inches inclusive");
+                    MessageBox.Show($"The width must a whole number between {Desk.MINWIDTH} and {Desk.MAXWIDTH} inches inclusive.");
                     numericWidth.Text = String.Empty;
                     data_Enter(this, EventArgs.Empty);
                     numericWidth.BackColor = Color.Red;
@@ -64,7 +64,7 @@ namespace MegaDesk_3_GlenSadler
             }
             else if (int.TryParse(numericWidth.Text, out WidthInput) == false && numericWidth.Text.Length != 0)
             {
-                MessageBox.Show("Please enter a number");
+                MessageBox.Show($"The width must a whole number between {Desk.MINWIDTH} and {Desk.MAXWIDTH} inches inclusive.");
                 numericWidth.Text = String.Empty;
                 numericWidth.BackColor = Color.Red;
                 numericWidth.Focus();
@@ -82,7 +82,7 @@ namespace MegaDesk_3_GlenSadler
             //numericWidth.Maximum = 96;
             if (Char.IsControl(e.KeyChar) == false && Char.IsDigit(e.KeyChar) == false)
             {
-                MessageBox.Show("Please enter a number");
+                MessageBox.Show("Please enter a number - Text is not permitted");
                 e.Handled = true;
                 numericWidth.BackColor = Color.Red;
                 numericWidth.Focus();
@@ -112,7 +112,7 @@ namespace MegaDesk_3_GlenSadler
             }
             else if (int.TryParse(numericDepth.Text, out DepthInput) == false && numericDepth.Text.Length != 0)
             {
-                MessageBox.Show($"The depth must a whole number between {Desk.MINDEPTH} and {Desk.MAXDEPTH} inches inclusive - No Text!");
+                MessageBox.Show($"The depth must a whole number between {Desk.MINDEPTH} and {Desk.MAXDEPTH} inches inclusive.");
                 numericDepth.Text = String.Empty;
                 numericDepth.BackColor = Color.Red;
                 numericDepth.Focus();
@@ -129,7 +129,7 @@ namespace MegaDesk_3_GlenSadler
             //numericDepth.Maximum = 48;
             if (Char.IsControl(e.KeyChar) == false && Char.IsDigit(e.KeyChar) == false)
             {
-                MessageBox.Show("Please enter a number");
+                MessageBox.Show("Please enter a number - text is not permitted");
                 e.Handled = true;
                 numericDepth.BackColor = Color.Red;
                 numericDepth.Focus();

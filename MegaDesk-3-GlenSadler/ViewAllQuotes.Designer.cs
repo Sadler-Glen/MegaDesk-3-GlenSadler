@@ -51,7 +51,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ViewAllQuotes";
-            this.Text = "ViewAllQuotes";
+            this.Text = "View All Quotes";
             this.Load += new System.EventHandler(this.ViewAllQuotes_Load);
             this.ResumeLayout(false);
 

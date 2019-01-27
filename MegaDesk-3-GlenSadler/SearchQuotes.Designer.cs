@@ -51,7 +51,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "SearchQuotes";
-            this.Text = "SearchQuotes";
+            this.Text = "Search Quotes";
             this.ResumeLayout(false);
 
         }
