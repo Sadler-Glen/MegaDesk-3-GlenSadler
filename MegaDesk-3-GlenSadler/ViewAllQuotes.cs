@@ -24,9 +24,9 @@ namespace MegaDesk_3_GlenSadler
             Close();
         }
 
-        private void ViewAllQuotes_FormClosing(object sender, FormClosingEventArgs e)
+        private void ViewAllQuotes_Load(object sender, EventArgs e)
         {
-            Application.Exit();
+
         }
     }
 }

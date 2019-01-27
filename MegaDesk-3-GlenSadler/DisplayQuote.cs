@@ -26,7 +26,9 @@ namespace MegaDesk_3_GlenSadler
 
         private void DisplyQuote_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            var mainMenu = (MainMenu)Tag;
+            mainMenu.Show();
+            Close();
         }
     }
 }

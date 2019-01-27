@@ -48,8 +48,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnCancel);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ViewAllQuotes";
             this.Text = "ViewAllQuotes";
+            this.Load += new System.EventHandler(this.ViewAllQuotes_Load);
             this.ResumeLayout(false);
 
         }

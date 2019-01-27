@@ -30,6 +30,8 @@
         {
             this.labelCustomerName = new System.Windows.Forms.Label();
             this.groupBoxSurfaceArea = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.surfaceAreaCalc = new System.Windows.Forms.Label();
             this.labelSurfaceArea = new System.Windows.Forms.Label();
             this.numericDepth = new System.Windows.Forms.NumericUpDown();
@@ -86,6 +88,8 @@
             // 
             // groupBoxSurfaceArea
             // 
+            this.groupBoxSurfaceArea.Controls.Add(this.label4);
+            this.groupBoxSurfaceArea.Controls.Add(this.label2);
             this.groupBoxSurfaceArea.Controls.Add(this.surfaceAreaCalc);
             this.groupBoxSurfaceArea.Controls.Add(this.labelSurfaceArea);
             this.groupBoxSurfaceArea.Controls.Add(this.numericDepth);
@@ -95,15 +99,37 @@
             this.groupBoxSurfaceArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxSurfaceArea.Location = new System.Drawing.Point(31, 56);
             this.groupBoxSurfaceArea.Name = "groupBoxSurfaceArea";
-            this.groupBoxSurfaceArea.Size = new System.Drawing.Size(268, 139);
+            this.groupBoxSurfaceArea.Size = new System.Drawing.Size(268, 193);
             this.groupBoxSurfaceArea.TabIndex = 1;
             this.groupBoxSurfaceArea.TabStop = false;
             this.groupBoxSurfaceArea.Text = "Surface Area";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label4.Location = new System.Drawing.Point(20, 115);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 17);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "(12\" to 48\")";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label2.Location = new System.Drawing.Point(23, 55);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(80, 17);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "(24\" to 96\")";
+            // 
             // surfaceAreaCalc
             // 
             this.surfaceAreaCalc.AutoSize = true;
-            this.surfaceAreaCalc.Location = new System.Drawing.Point(140, 103);
+            this.surfaceAreaCalc.Location = new System.Drawing.Point(139, 149);
             this.surfaceAreaCalc.Name = "surfaceAreaCalc";
             this.surfaceAreaCalc.Size = new System.Drawing.Size(22, 20);
             this.surfaceAreaCalc.TabIndex = 5;
@@ -112,7 +138,7 @@
             // labelSurfaceArea
             // 
             this.labelSurfaceArea.AutoSize = true;
-            this.labelSurfaceArea.Location = new System.Drawing.Point(7, 103);
+            this.labelSurfaceArea.Location = new System.Drawing.Point(6, 149);
             this.labelSurfaceArea.Name = "labelSurfaceArea";
             this.labelSurfaceArea.Size = new System.Drawing.Size(103, 20);
             this.labelSurfaceArea.TabIndex = 4;
@@ -120,26 +146,28 @@
             // 
             // numericDepth
             // 
-            this.numericDepth.Location = new System.Drawing.Point(130, 63);
+            this.numericDepth.Location = new System.Drawing.Point(130, 100);
             this.numericDepth.Name = "numericDepth";
             this.numericDepth.Size = new System.Drawing.Size(120, 26);
             this.numericDepth.TabIndex = 1;
             this.numericDepth.ValueChanged += new System.EventHandler(this.numericDepthEvent);
+            this.numericDepth.Enter += new System.EventHandler(this.data_Enter);
             this.numericDepth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numericDepth_Keypress);
             // 
             // numericWidth
             // 
-            this.numericWidth.Location = new System.Drawing.Point(130, 27);
+            this.numericWidth.Location = new System.Drawing.Point(130, 38);
             this.numericWidth.Name = "numericWidth";
             this.numericWidth.Size = new System.Drawing.Size(120, 26);
             this.numericWidth.TabIndex = 0;
             this.numericWidth.ValueChanged += new System.EventHandler(this.numericWidthEvent);
+            this.numericWidth.Enter += new System.EventHandler(this.data_Enter);
             this.numericWidth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numericWidth_Keypress);
             // 
             // labelDepth
             // 
             this.labelDepth.AutoSize = true;
-            this.labelDepth.Location = new System.Drawing.Point(7, 65);
+            this.labelDepth.Location = new System.Drawing.Point(6, 95);
             this.labelDepth.Name = "labelDepth";
             this.labelDepth.Size = new System.Drawing.Size(113, 20);
             this.labelDepth.TabIndex = 1;
@@ -148,7 +176,7 @@
             // labelWidth
             // 
             this.labelWidth.AutoSize = true;
-            this.labelWidth.Location = new System.Drawing.Point(7, 29);
+            this.labelWidth.Location = new System.Drawing.Point(9, 35);
             this.labelWidth.Name = "labelWidth";
             this.labelWidth.Size = new System.Drawing.Size(110, 20);
             this.labelWidth.TabIndex = 0;
@@ -161,7 +189,7 @@
             this.groupBoxShipping.Controls.Add(this.radioBtnShipping7days);
             this.groupBoxShipping.Controls.Add(this.radioBtnShippingStandard);
             this.groupBoxShipping.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxShipping.Location = new System.Drawing.Point(32, 327);
+            this.groupBoxShipping.Location = new System.Drawing.Point(31, 360);
             this.groupBoxShipping.Name = "groupBoxShipping";
             this.groupBoxShipping.Size = new System.Drawing.Size(268, 148);
             this.groupBoxShipping.TabIndex = 4;
@@ -289,13 +317,14 @@
             this.customerName.Name = "customerName";
             this.customerName.Size = new System.Drawing.Size(214, 26);
             this.customerName.TabIndex = 0;
+            this.customerName.Enter += new System.EventHandler(this.data_EnterText);
             // 
             // groupBoxDrawer
             // 
             this.groupBoxDrawer.Controls.Add(this.numericDrawers);
             this.groupBoxDrawer.Controls.Add(this.label1);
             this.groupBoxDrawer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxDrawer.Location = new System.Drawing.Point(33, 227);
+            this.groupBoxDrawer.Location = new System.Drawing.Point(32, 270);
             this.groupBoxDrawer.Name = "groupBoxDrawer";
             this.groupBoxDrawer.Size = new System.Drawing.Size(267, 64);
             this.groupBoxDrawer.TabIndex = 3;
@@ -313,6 +342,7 @@
             this.numericDrawers.Name = "numericDrawers";
             this.numericDrawers.Size = new System.Drawing.Size(120, 26);
             this.numericDrawers.TabIndex = 0;
+            this.numericDrawers.Enter += new System.EventHandler(this.data_Enter);
             // 
             // label1
             // 
@@ -327,7 +357,7 @@
             // 
             this.sumSurfaceArea.AutoSize = true;
             this.sumSurfaceArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sumSurfaceArea.Location = new System.Drawing.Point(130, 25);
+            this.sumSurfaceArea.Location = new System.Drawing.Point(123, 34);
             this.sumSurfaceArea.Name = "sumSurfaceArea";
             this.sumSurfaceArea.Size = new System.Drawing.Size(18, 20);
             this.sumSurfaceArea.TabIndex = 10;
@@ -337,7 +367,7 @@
             // 
             this.labelSumSurfaceArea.AutoSize = true;
             this.labelSumSurfaceArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSumSurfaceArea.Location = new System.Drawing.Point(10, 25);
+            this.labelSumSurfaceArea.Location = new System.Drawing.Point(6, 34);
             this.labelSumSurfaceArea.Name = "labelSumSurfaceArea";
             this.labelSumSurfaceArea.Size = new System.Drawing.Size(111, 20);
             this.labelSumSurfaceArea.TabIndex = 9;
@@ -347,7 +377,7 @@
             // 
             this.sumMaterial.AutoSize = true;
             this.sumMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sumMaterial.Location = new System.Drawing.Point(130, 62);
+            this.sumMaterial.Location = new System.Drawing.Point(123, 74);
             this.sumMaterial.Name = "sumMaterial";
             this.sumMaterial.Size = new System.Drawing.Size(18, 20);
             this.sumMaterial.TabIndex = 12;
@@ -357,7 +387,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(45, 89);
+            this.label3.Location = new System.Drawing.Point(41, 114);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 20);
             this.label3.TabIndex = 11;
@@ -367,7 +397,7 @@
             // 
             this.sumDrawers.AutoSize = true;
             this.sumDrawers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sumDrawers.Location = new System.Drawing.Point(130, 92);
+            this.sumDrawers.Location = new System.Drawing.Point(123, 114);
             this.sumDrawers.Name = "sumDrawers";
             this.sumDrawers.Size = new System.Drawing.Size(18, 20);
             this.sumDrawers.TabIndex = 14;
@@ -377,7 +407,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(40, 57);
+            this.label5.Location = new System.Drawing.Point(36, 74);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(81, 20);
             this.label5.TabIndex = 13;
@@ -387,7 +417,7 @@
             // 
             this.sumTotalCost.AutoSize = true;
             this.sumTotalCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sumTotalCost.Location = new System.Drawing.Point(130, 174);
+            this.sumTotalCost.Location = new System.Drawing.Point(123, 195);
             this.sumTotalCost.Name = "sumTotalCost";
             this.sumTotalCost.Size = new System.Drawing.Size(18, 20);
             this.sumTotalCost.TabIndex = 16;
@@ -397,7 +427,7 @@
             // 
             this.labelTotalCost.AutoSize = true;
             this.labelTotalCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotalCost.Location = new System.Drawing.Point(32, 171);
+            this.labelTotalCost.Location = new System.Drawing.Point(28, 195);
             this.labelTotalCost.Name = "labelTotalCost";
             this.labelTotalCost.Size = new System.Drawing.Size(89, 20);
             this.labelTotalCost.TabIndex = 15;
@@ -407,7 +437,7 @@
             // 
             this.sumShipping.AutoSize = true;
             this.sumShipping.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sumShipping.Location = new System.Drawing.Point(130, 120);
+            this.sumShipping.Location = new System.Drawing.Point(123, 154);
             this.sumShipping.Name = "sumShipping";
             this.sumShipping.Size = new System.Drawing.Size(18, 20);
             this.sumShipping.TabIndex = 18;
@@ -417,7 +447,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(42, 121);
+            this.label9.Location = new System.Drawing.Point(38, 154);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(79, 20);
             this.label9.TabIndex = 17;
@@ -426,7 +456,7 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(197, 508);
+            this.btnCancel.Location = new System.Drawing.Point(196, 551);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(100, 40);
             this.btnCancel.TabIndex = 6;
@@ -437,7 +467,7 @@
             // btnSubmit
             // 
             this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.Location = new System.Drawing.Point(319, 508);
+            this.btnSubmit.Location = new System.Drawing.Point(318, 551);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(100, 40);
             this.btnSubmit.TabIndex = 5;
@@ -460,7 +490,7 @@
             this.groupQuoteSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupQuoteSummary.Location = new System.Drawing.Point(355, 271);
             this.groupQuoteSummary.Name = "groupQuoteSummary";
-            this.groupQuoteSummary.Size = new System.Drawing.Size(232, 204);
+            this.groupQuoteSummary.Size = new System.Drawing.Size(232, 237);
             this.groupQuoteSummary.TabIndex = 19;
             this.groupQuoteSummary.TabStop = false;
             this.groupQuoteSummary.Text = "Quote Summary";
@@ -469,7 +499,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(619, 566);
+            this.ClientSize = new System.Drawing.Size(619, 608);
             this.Controls.Add(this.groupQuoteSummary);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.btnCancel);
@@ -540,5 +570,7 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.GroupBox groupQuoteSummary;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
     }
 }
