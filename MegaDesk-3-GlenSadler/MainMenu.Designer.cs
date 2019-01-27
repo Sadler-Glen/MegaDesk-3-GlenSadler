@@ -113,6 +113,8 @@ namespace MegaDesk_3_GlenSadler
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnAddQuote);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MegaDesk -3-Glen Sadler";

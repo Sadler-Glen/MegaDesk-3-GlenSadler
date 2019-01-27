@@ -29,11 +29,11 @@ namespace MegaDesk_3_GlenSadler
         {
             CustomerName = customerName;
             QuoteDate = quoteDate;
+            RushDays = rushDays;
             Desk.Width = width;
             Desk.Depth = depth;
             Desk.NumberOfDrawers = drawers;
             Desk.DeskTopMaterial = material;
-            Desk.RushDays = rushDays;
             Desk.SurfaceArea = Desk.Width * Desk.Depth;
         }
 
@@ -58,15 +58,19 @@ namespace MegaDesk_3_GlenSadler
         }
 
         // Temporary return of 100
+        // Code yet to be written
         private int DeskTopMaterialCost()
         {
             return 100;
         }
 
         // Temporary return of 100
+        // Code yet to be written
         private int RushDaysCost()
         {
-            return 100;
+            RushDays = 100;
+
+            return RushDays;
         }
     }
 
